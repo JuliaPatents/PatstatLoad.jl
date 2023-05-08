@@ -47,7 +47,9 @@ CREATE INDEX ON tls223_appln_docus (docus_class_symbol);
 --
 CREATE INDEX ON tls224_appln_cpc (appln_id);
 CREATE INDEX ON tls224_appln_cpc (cpc_class_symbol);
-CREATE INDEX ON tls224_appln_cpc (cpc_scheme);
+--
+CREATE INDEX ON tls225_docdb_fam_cpc (docdb_family_id);
+CREATE INDEX ON tls225_docdb_fam_cpc (cpc_class_symbol);
 --
 CREATE INDEX ON tls226_person_orig (person_id);
 --
