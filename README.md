@@ -12,6 +12,7 @@
 * Unzip all of the raw data files (named "tlsXXX_partXX.csv") into a single directory on the database server.
 * Setup a PostgreSQL server and create a fresh database.
 * Setup a PostgreSQL user with full privileges (including CREATE) on the database (or use the "postgres" superuser).
+* (OPTIONAL) Set up a tablespace on the drive where you want to store the data. You can do this with `CREATE TABLESPACE patstat LOCATION 'path/to/tablespace';` followed by `SET default_tablespace = patstat;`.
 * Clone this repository somewhere on the database server.
 * Install a recent version of Julia (Recommended: 1.9+) on the database server.
 * Open a Julia REPL in the repository root directory and enter PKG mode using the `]` key.

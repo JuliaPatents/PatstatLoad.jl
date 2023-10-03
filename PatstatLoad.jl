@@ -12,6 +12,8 @@ tbls = CSV.read("PATSTAT_table_description.csv", DataFrame)
 tbls_incl = filter(t -> !(t.table_id in tbls_excl), tbls)
 println(tbls_incl)
 
+execute(db, "SET default_tablespace = $tablespace;")
+
 for tbl in eachrow(tbls_incl)
     println()
     parts = filter(fname -> startswith(fname, tbl.table_id) && endswith(fname, ".csv"), readdir(dir_patstat_raw))
